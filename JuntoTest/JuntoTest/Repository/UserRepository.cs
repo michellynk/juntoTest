@@ -18,7 +18,7 @@ namespace JuntoTest.Repository
             using (MySqlConnection connection = new
                 MySqlConnection(_connectionString))
             {
-                return connection.Query<user>("SELECT * from user order by id asc");
+                return connection.Query<user>("SELECT uid, ulogin, uname, upassword from user order by id asc");
             }
         }
     }
